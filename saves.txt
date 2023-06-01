@@ -1,0 +1,16 @@
+/* #home.show h1 {
+  padding-top: 50px;
+  opacity: 1; /* Change the opacity to 1 when the "show" class is added */
+} */
+
+
+/* #home.show p {
+  opacity: 1; /* Change the opacity to 1 when the "show" class is added */
+  font-size: 1.5rem;
+} */
+
+/* .container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+} */

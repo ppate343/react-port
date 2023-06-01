@@ -1,163 +1,179 @@
 body {
-    background-color: white;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: white;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Heading styles */
-h1, h2, h3 {
-    color: #fff;
+h1,
+h2,
+h3 {
+  color: #fff;
 }
 
 /* Section styles */
 section {
-    padding: 40px;
+  padding: 40px;
 }
 
 /* Navigation bar styles */
 header {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    background-color: black;
-    padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-color: black;
+  padding: 20px;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
 }
 
 nav li {
-    margin-right: 20px; /* Add right margin to create space between items */
-    position: relative; 
+  margin-right: 20px; /* Add right margin to create space between items */
+  position: relative;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 nav a:hover {
-    color: #0f9241;
+  color: #0f9241;
 }
 
 nav a:hover::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* Adjust the distance of the line from the text */
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4); /* Add white shadow effect */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust the distance of the line from the text */
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4); /* Add white shadow effect */
 }
 
 .name {
-    color: #fff;
-    margin-right: 20px;
+  color: #fff;
+  margin-right: 20px;
 }
 
 #home {
-    /* background-image: url('assets/home-background.jpg'); */
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    height: 50vh; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    color: white;
+  /* background-image: url('assets/home-background.jpg'); */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 #home h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0; /* Start with zero opacity */
-    transition: opacity 5s ease; /* Transition the opacity property */
-    color: white;
-
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0; /* Start with zero opacity */
+  transition: opacity 5s ease; /* Transition the opacity property */
+  color: white;
 }
 
 #home.show h1 {
-    padding-top: 50px;
-    opacity: 1; /* Change the opacity to 1 when the "show" class is added */
+  padding-top: 50px;
+  opacity: 1; /* Change the opacity to 1 when the "show" class is added */
 }
 
 #home p {
-    font-size: 1rem;
-    opacity: 0; /* Start with zero opacity */
-    transition: opacity 5s ease; /* Transition the opacity property */
-    color: white;
+  font-size: 1rem;
+  opacity: 0; /* Start with zero opacity */
+  transition: opacity 5s ease; /* Transition the opacity property */
+  color: white;
 }
 
-
 #home.show p {
-    opacity: 1; /* Change the opacity to 1 when the "show" class is added */
-    font-size: 1.5rem;
+  opacity: 1; /* Change the opacity to 1 when the "show" class is added */
+  font-size: 1.5rem;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .sub-container {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-  
-  .sub-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .show {
-    opacity: 1;
-  }
-
-  #about {
-    /* background-image: url('assets/home-background.jpg'); */
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: start;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#about h1 {
-    padding-top: 50px;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0; /* Start with zero opacity */
-    transition: opacity 5s ease; /* Transition the opacity property */
-    color: white;
+.sub-container {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-#about.show h1 {
-    opacity: 1; /* Change the opacity to 1 when the "show" class is added */
+.sub-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.show {
+  opacity: 1;
+}
+
+#about {
+  /* background-image: url('assets/home-background.jpg'); */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  color: white;
+}
+
+#about h2 {
+  padding-top: 50px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0; /* Start with zero opacity */
+  transition: opacity 5s ease; /* Transition the opacity property */
+  color: white;
+}
+
+#about.show h2 {
+  opacity: 1; /* Change the opacity to 1 when the "show" class is added */
 }
